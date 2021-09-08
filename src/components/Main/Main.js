@@ -20,7 +20,7 @@ const Main = () => {
                 ?
                 items.map((item, index) => <Item key={index} item={item}/>)
                 :
-                <div className={style.fetching}></div>  
+                <div className={style.fetching}>Loading</div>  
             }
         </div>
     );

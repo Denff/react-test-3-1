@@ -1,22 +1,35 @@
 .fetching {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
     margin: 30vh auto;
-    border: 2px dashed red;
-    -webkit-animation: search-fetching 1s infinite alternate linear;
-    animation: search-fetching 1s infinite alternate linear;
+    height: 120px;
+    width: 180px;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 24px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    background-color: rgb(0, 255, 55);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+    animation: fetching-load 3s infinite;
 }
 
-@keyframes search-fetching {
+@keyframes fetching-load {
     0% {
-        transform: rotate(0deg);
+        transform: rotateY(0deg)  rotateX(0deg) perspective(200px);
+    }
+
+    51% {
+        transform: rotateY(360deg) rotateX(15deg) perspective(0);
+        background-color: rgb(247, 10, 10);
     }
 
     100% {
-        transform: rotate(360deg) scale(1.5);
+        transform: rotateY(0deg) rotateX(0deg) perspective(400px);
     }
 }
+
 
 
 .item__inner {

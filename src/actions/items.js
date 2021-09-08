@@ -7,10 +7,12 @@ export const getItems = (items) => {
     }
     return async (dispatch) => {
         dispatch(setIsFetching(true));
-            await axios.get(`http://localhost:8000/items`)
+            // await axios.get(`http://localhost:8000/items`)
+            await axios.get(`https://denff.github.io/react-test-3-1/api`)
                 .then(res => {
                     const items = res.data;
                     dispatch(setItems({ items }));
                 });
     }
 }
+// https://denff.github.io/react-test-3-1/
